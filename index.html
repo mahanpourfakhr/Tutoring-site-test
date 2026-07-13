@@ -5,20 +5,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Tutoring & Advising Name</title>
+  <title>The Tutoring Room</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site-header">
-  <div class="logo">YourName</div>
+  <a href="index.html" class="logo">
+    <span class="logo-text">THE TUTORING ROOM</span>
+    <span class="logo-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.75" y="0.75" width="22.5" height="22.5" stroke="currentColor" stroke-width="1.25"/>
+        <circle cx="9.5" cy="12" r="3.25" stroke="currentColor" stroke-width="1.25"/>
+        <path d="M12.75 12H20M18 12V14.5M20 12V14" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+        </svg>
+    </span>
+    </a>
   <div class="nav-group">
     <nav>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html" class="nav-active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="team.html">Our Team</a>
       <a href="blog.html">Blog</a>
     </nav>
+    <a href="consultation.html" class="btn-consultation">Free Consultation</a>
     <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
   </div>
 </header>
@@ -28,103 +38,26 @@
     <p class="hero-label"> College & Grad Admissions + STEM Tutoring</p>
     <h1>Clear guidance,<br>from application to A+</h1>
     <p class="hero-sub">One-on-one support for the hardest parts of school getting in, and then doing well once you're there.</p>
-    <a href="#contact" class="btn-primary">Get started</a>
+    <a href="#contact" class="btn-primary">Book a Free Consultation</a>
     </section>
 
-    <section id="services" class="services">
-    <h2 class="section-heading">How I can help</h2>
-    <div class="services-grid">
-
-        <div class="service-card">
-        <span class="service-marginalia">／ admissions</span>
-        <h3>College Advising</h3>
-        <p>Strategy, essays, and application timelines built around your goals.</p>
-        </div>
-
-        <div class="service-card">
-        <span class="service-marginalia">／ admissions</span>
-        <h3>Grad School Advising</h3>
-        <p>Personal statements, program selection, and interview prep.</p>
-        </div>
-
-        <div class="service-card">
-        <span class="service-marginalia">／ tutoring</span>
-        <h3>STEM Tutoring</h3>
-        <p>One-on-one help in math, physics, chemistry, CS, and more.</p>
-        </div>
-
-    </div>
-    </section>
-
-    <section id="about" class="about">
-    <h2 class="section-heading">About Us</h2>
-
-    <div class="person-row">
-        <div class="person-photo">
-        <img src="images/person1.jpg" alt="Photo of [Name 1]">
-        </div>
-        <div class="person-text">
-        <h3>[Name 1]</h3>
-        <p>2–4 sentences about this person's background, education, and what they tutor/advise on.</p>
-        </div>
-    </div>
-
-    <div class="person-row reverse">
-        <div class="person-photo">
-        <img src="images/person2.jpg" alt="Photo of [Name 2]">
-        </div>
-        <div class="person-text">
-        <h3>[Name 2]</h3>
-        <p>2–4 sentences about this person's background, education, and what they tutor/advise on.</p>
-        </div>
-    </div>
-
-    <div class="person-row">
-        <div class="person-photo">
-        <img src="images/person3.jpg" alt="Photo of [Name 3]">
-        </div>
-        <div class="person-text">
-        <h3>[Name 3]</h3>
-        <p>2–4 sentences about this person's background, education, and what they tutor/advise on.</p>
-        </div>
-    </div>
-
-    </section>
-
-    <section id="contact" class="contact">
-    <h2 class="section-heading">Get in touch</h2>
-    <p class="contact-sub">Questions about advising or tutoring? Send a message and we'll get back to you.</p>
-
-    <form action="https://formspree.io/f/xdardaqd" method="POST" class="contact-form">
-        <input type="hidden" name="_redirect" value="https://yourdomain.com/index.html"> /* NEEDS TO BE UPDATED TO A REAL WEBWSITE LATER */
-        <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-        </div>
-
-        <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-        </div>
-
-        <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-
-        <button type="submit" class="btn-primary">Send message</button>
-    </form>
+    <section class="admits">
+      <h2 class="section-heading">Our team has firsthand experience with the academic expectations and admissions processes at:</h2>
+      <div class="admits-image-wrapper">
+        <img src="images/School_List.png" alt="Colleges our students have been admitted to including Stanford, Yale, MIT, Columbia, Penn, Berkeley, Cornell, UCLA and more">
+      </div>
     </section>
 
   </main>
 
 <footer class="site-footer">
-  <p>&copy; 2026 The Tutoring Room. All rights reserved.</p>
+  <p>&copy; 2026 THE TUTORING ROOM. All rights reserved.</p>
   <div class="footer-links">
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="team.html">Our Team</a>
     <a href="blog.html">Blog</a>
+    <a href="consultation.html">Free Consultation</a>
   </div>
 </footer>
 

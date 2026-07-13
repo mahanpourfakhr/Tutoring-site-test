@@ -2,12 +2,12 @@
 
 /* ---- Design tokens (light mode = default) ---- */
 :root {
-  --color-bg: #FAF7F0;
-  --color-text: #1B2A4A;
-  --color-text-muted: #6B7280;
-  --color-accent: #C2622D;
+  --color-bg: #F5F0E8;
+  --color-text: #0D2A4A;
+  --color-text-muted: #4A5568;
+  --color-accent: #C49A2A;
   --color-surface: #FFFFFF;
-  --color-border: #E5E0D5;
+  --color-border: #E0D9CC;
 
   --font-display: "Source Serif 4", Georgia, serif;
   --font-body: "Inter", -apple-system, sans-serif;
@@ -23,12 +23,12 @@
 
 /* ---- Dark mode overrides ---- */
 [data-theme="dark"] {
-  --color-bg: #11182B;
-  --color-text: #F4F1EA;
+  --color-bg: #0D2A4A;
+  --color-text: #F5F0E8;
   --color-text-muted: #9CA3AF;
-  --color-accent: #E08A52;
-  --color-surface: #1B2440;
-  --color-border: #2A3458;
+  --color-accent: #E8B84B;
+  --color-surface: #1a5079;
+  --color-border: #1A4F8A;
 }
 
 /* ---- Reset & base ---- */
@@ -83,9 +83,92 @@ h1, h2, h3 {
 }
 
 .logo {
-  font-family: var(--font-display);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: color var(--transition);
+}
+
+.logo:hover {
+  color: var(--color-accent);
+}
+
+.logo-text {
+  font-family: var(--font-body);
+  font-weight: 900;
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon svg {
+  width: 34px;
+  height: 34px;
+  display: block;
+}
+
+.nav-active {
+  color: var(--color-accent) !important;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 2px;
+}
+
+
+.btn-consultation {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: white;
+  text-decoration: none;
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius);
+  transition: transform var(--transition), box-shadow var(--transition);
+  white-space: nowrap;
+}
+
+.btn-consultation:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px -6px var(--color-accent);
+}
+
+.nav-active-consultation {
+  box-shadow: 0 0 0 2px var(--color-accent);
+}
+
+/* ---- Page hero (for inner pages) ---- */
+.page-hero {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg) var(--space-lg);
+  text-align: center;
+}
+
+/* ---- Select dropdown ---- */
+.form-group select {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  transition: border-color var(--transition);
+  appearance: none;
+  cursor: pointer;
+}
+
+.form-group select:focus {
+  outline: none;
+  border-color: var(--color-accent);
 }
 
 .site-header nav {
@@ -498,4 +581,32 @@ h1, h2, h3 {
   color: var(--color-text);
   font-size: 1.05rem;
   line-height: 1.8;
+}
+
+
+
+
+/* ---- Admits section ---- */
+.admits {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg) var(--space-xl);
+  text-align: center;
+}
+
+.admits .hero-label {
+  display: block;
+  margin-bottom: var(--space-md);
+}
+
+.admits-image-wrapper {
+  display: inline-block;
+  width: 100%;
+}
+
+.admits-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  mix-blend-mode: multiply;
 }
