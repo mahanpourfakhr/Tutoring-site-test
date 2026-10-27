@@ -156,6 +156,15 @@ h1, h2, h3 {
   font-size: clamp(2.6rem, 5vw, 3.5rem);
 }
 
+.team-page-hero {
+  padding-bottom: var(--space-sm);
+}
+
+.team-page-intro {
+  font-size: 1.15rem;
+  margin-bottom: 0;
+}
+
 /* ---- Select dropdown ---- */
 .form-group select {
   font-family: var(--font-body);
@@ -548,6 +557,10 @@ h1, h2, h3 {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 var(--space-lg);
+}
+
+.team-story p {
+  margin-top: 0;
 }
 
 .profile-links a,
