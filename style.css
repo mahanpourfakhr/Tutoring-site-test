@@ -983,11 +983,17 @@ h1, h2, h3 {
 .admits-image-wrapper {
   display: inline-block;
   width: 100%;
+  padding: clamp(0.75rem, 2vw, 1.5rem);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 26px -22px rgba(13, 42, 74, 0.55);
 }
 
 .admits-image-wrapper img {
   width: 100%;
   height: auto;
   display: block;
-  mix-blend-mode: multiply;
+  mix-blend-mode: normal;
 }
