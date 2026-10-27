@@ -152,6 +152,10 @@ h1, h2, h3 {
   text-align: center;
 }
 
+.team-page-title {
+  font-size: clamp(2.6rem, 5vw, 3.5rem);
+}
+
 /* ---- Select dropdown ---- */
 .form-group select {
   font-family: var(--font-body);
