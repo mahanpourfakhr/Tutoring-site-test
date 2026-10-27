@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Consultation — Your Tutoring & Advising Name</title>
-  <link rel="stylesheet" href="style.css?v=51320ec">
+  <title>Free Consultation | The Tutoring Room</title>
+  <link rel="stylesheet" href="style.css?v=site-refresh-20261027">
 </head>
 <body>
 
@@ -37,10 +37,10 @@
   <main>
     <section class="contact">
       <h1 class="section-heading">Book a Free Consultation</h1>
-      <p class="contact-sub">No commitment, no pressure, just a conversation about how we can help.</p>
+      <p class="contact-sub">Tell us what you’re working toward. We’ll follow up to learn more and recommend next steps.</p>
 
-      <form action="https://formspree.io/f/xdardaqd" method="POST" class="contact-form">
-        <input type="hidden" name="_redirect" value="https://example.com">
+      <form id="consultation-form" action="https://formspree.io/f/xdardaqd" method="POST" class="contact-form">
+        <input type="hidden" name="subject" value="New consultation request — The Tutoring Room">
 
         <div class="form-group">
           <label for="name">Name</label>
@@ -68,33 +68,9 @@
           <textarea id="message" name="message" rows="5" required></textarea>
         </div>
 
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
         <button type="submit" class="btn-primary">Send my request</button>
       </form>
-    </section>
-
-<section id="contact" class="contact">
-    <h2 class="section-heading">Get in touch</h2>
-    <p class="contact-sub">Questions about advising or tutoring? Send a message and we'll get back to you.</p>
-
-    <form action="https://formspree.io/f/xdardaqd" method="POST" class="contact-form">
-        <input type="hidden" name="_redirect" value="https://yourdomain.com/index.html"> /* NEEDS TO BE UPDATED TO A REAL WEBWSITE LATER */
-        <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-        </div>
-
-        <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-        </div>
-
-        <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-
-        <button type="submit" class="btn-primary">Send message</button>
-    </form>
     </section>
 
   </main>
@@ -113,6 +89,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=51320ec"></script>
+  <script src="script.js?v=site-refresh-20261027"></script>
 </body>
 </html>

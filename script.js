@@ -58,3 +58,28 @@ document.addEventListener('keydown', (event) => {
 window.addEventListener('resize', () => {
   if (window.innerWidth > 768) setMenuOpen(false);
 });
+
+const consultationForm = document.getElementById('consultation-form');
+consultationForm?.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const submitButton = consultationForm.querySelector('button[type="submit"]');
+  const status = document.getElementById('form-status');
+  if (!submitButton || !status) return;
+
+  submitButton.disabled = true;
+  status.textContent = 'Sending your request…';
+
+  try {
+    const response = await fetch(consultationForm.action, {
+      method: 'POST',
+      body: new FormData(consultationForm),
+      headers: { Accept: 'application/json' }
+    });
+
+    if (!response.ok) throw new Error('Form submission failed');
+    window.location.assign('thank-you.html');
+  } catch {
+    status.textContent = 'We couldn’t confirm that your request was sent. Please try again.';
+    submitButton.disabled = false;
+  }
+});

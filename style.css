@@ -352,6 +352,23 @@ h1, h2, h3 {
   color: var(--color-text-muted);
 }
 
+.team-story {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.profile-links a,
+.blog-card a {
+  color: var(--color-accent);
+}
+
+.profile-links a:hover,
+.blog-card a:hover {
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
 
 /* ---- Contact ---- */
 .contact {
@@ -370,6 +387,15 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
+}
+
+.form-status:empty {
+  display: none;
+}
+
+.form-status {
+  color: var(--color-text-muted);
+  text-align: center;
 }
 
 .form-group {
@@ -582,6 +608,10 @@ h1, h2, h3 {
   /* Contact: tighter padding */
   .contact {
     padding: var(--space-lg) var(--space-md);
+  }
+
+  .team-story {
+    padding: 0 var(--space-md);
   }
 
   /* Footer: stack links if tight */
