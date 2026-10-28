@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services | The Tutoring Room</title>
-  <link rel="stylesheet" href="style.css?v=site-refresh-20261027-service-accordion-v2">
+  <link rel="stylesheet" href="style.css?v=site-refresh-20261027-service-accordion-v3">
 </head>
 <body>
 
@@ -61,59 +61,44 @@
       </div>
 
       <div class="services-grid">
-        <details class="service-card">
-          <summary class="service-card-summary">
-            <span class="service-card-top">
-              <span class="service-number">01</span>
-              <span class="service-symbol" aria-hidden="true">↗</span>
-            </span>
+        <article class="service-card">
+          <button class="service-card-toggle" type="button" aria-expanded="false" aria-controls="service-college-panel">
+            <span class="service-card-top"><span class="service-number">01</span><span class="service-symbol" aria-hidden="true">↗</span></span>
             <span class="service-marginalia">COLLEGE ADMISSIONS</span>
             <span class="service-card-title" role="heading" aria-level="3">College advising</span>
             <span class="service-card-description">Build a thoughtful application plan and tell your story with clarity and confidence.</span>
             <span class="service-expand-label"><span class="service-expand-copy"><span class="service-expand-open-label">Explore this service</span><span class="service-expand-close-label">Hide details</span></span><span class="service-expand-icon" aria-hidden="true">+</span></span>
-          </summary>
-          <ul class="service-details">
-            <li>Application strategy and school research</li>
-            <li>Essay ideas, drafts, and feedback</li>
-            <li>Timelines and application organization</li>
-          </ul>
-        </details>
+          </button>
+          <div class="service-card-panel" id="service-college-panel" aria-hidden="true"><div class="service-card-panel-inner">
+            <ul class="service-details"><li>Application strategy and school research</li><li>Essay ideas, drafts, and feedback</li><li>Timelines and application organization</li></ul>
+          </div></div>
+        </article>
 
-        <details class="service-card">
-          <summary class="service-card-summary">
-            <span class="service-card-top">
-              <span class="service-number">02</span>
-              <span class="service-symbol" aria-hidden="true">⌘</span>
-            </span>
+        <article class="service-card">
+          <button class="service-card-toggle" type="button" aria-expanded="false" aria-controls="service-grad-panel">
+            <span class="service-card-top"><span class="service-number">02</span><span class="service-symbol" aria-hidden="true">⌘</span></span>
             <span class="service-marginalia">GRADUATE ADMISSIONS</span>
             <span class="service-card-title" role="heading" aria-level="3">Grad school advising</span>
             <span class="service-card-description">Connect your experience and interests to the programs and opportunities you’re pursuing.</span>
             <span class="service-expand-label"><span class="service-expand-copy"><span class="service-expand-open-label">Explore this service</span><span class="service-expand-close-label">Hide details</span></span><span class="service-expand-icon" aria-hidden="true">+</span></span>
-          </summary>
-          <ul class="service-details">
-            <li>Program selection and application planning</li>
-            <li>Personal statements and essays</li>
-            <li>Interview preparation</li>
-          </ul>
-        </details>
+          </button>
+          <div class="service-card-panel" id="service-grad-panel" aria-hidden="true"><div class="service-card-panel-inner">
+            <ul class="service-details"><li>Program selection and application planning</li><li>Personal statements and essays</li><li>Interview preparation</li></ul>
+          </div></div>
+        </article>
 
-        <details class="service-card">
-          <summary class="service-card-summary">
-            <span class="service-card-top">
-              <span class="service-number">03</span>
-              <span class="service-symbol" aria-hidden="true">∑</span>
-            </span>
+        <article class="service-card">
+          <button class="service-card-toggle" type="button" aria-expanded="false" aria-controls="service-stem-panel">
+            <span class="service-card-top"><span class="service-number">03</span><span class="service-symbol" aria-hidden="true">∑</span></span>
             <span class="service-marginalia">ONE-ON-ONE SUPPORT</span>
             <span class="service-card-title" role="heading" aria-level="3">STEM tutoring</span>
             <span class="service-card-description">Make challenging material feel more manageable, one concept and one problem at a time.</span>
             <span class="service-expand-label"><span class="service-expand-copy"><span class="service-expand-open-label">Explore this service</span><span class="service-expand-close-label">Hide details</span></span><span class="service-expand-icon" aria-hidden="true">+</span></span>
-          </summary>
-          <ul class="service-details">
-            <li>Math, physics, chemistry, and biology</li>
-            <li>Engineering and computer science</li>
-            <li>Support from foundations to advanced coursework</li>
-          </ul>
-        </details>
+          </button>
+          <div class="service-card-panel" id="service-stem-panel" aria-hidden="true"><div class="service-card-panel-inner">
+            <ul class="service-details"><li>Math, physics, chemistry, and biology</li><li>Engineering and computer science</li><li>Support from foundations to advanced coursework</li></ul>
+          </div></div>
+        </article>
       </div>
     </section>
 
@@ -138,6 +123,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=site-refresh-20261027"></script>
+  <script src="script.js?v=site-refresh-20261027-service-drawer-v1"></script>
 </body>
 </html>
