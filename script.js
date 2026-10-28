@@ -59,6 +59,28 @@ window.addEventListener('resize', () => {
   if (window.innerWidth > 768) setMenuOpen(false);
 });
 
+const serviceCardToggles = document.querySelectorAll('.service-card-toggle');
+
+function setServiceCardOpen(card, isOpen) {
+  const toggle = card.querySelector('.service-card-toggle');
+  const panel = card.querySelector('.service-card-panel');
+  card.classList.toggle('is-open', isOpen);
+  toggle?.setAttribute('aria-expanded', String(isOpen));
+  panel?.setAttribute('aria-hidden', String(!isOpen));
+}
+
+serviceCardToggles.forEach((toggle) => {
+  toggle.addEventListener('click', () => {
+    const card = toggle.closest('.service-card');
+    if (!card) return;
+    const shouldOpen = toggle.getAttribute('aria-expanded') !== 'true';
+    document.querySelectorAll('.service-card.is-open').forEach((openCard) => {
+      if (openCard !== card) setServiceCardOpen(openCard, false);
+    });
+    setServiceCardOpen(card, shouldOpen);
+  });
+});
+
 const consultationForm = document.getElementById('consultation-form');
 consultationForm?.addEventListener('submit', async (event) => {
   event.preventDefault();
