@@ -393,6 +393,7 @@ h1, h2, h3 {
 
 .service-card {
   min-height: 280px;
+  align-self: start;
   padding: var(--space-md);
   display: flex;
   flex-direction: column;
@@ -452,13 +453,25 @@ h1, h2, h3 {
   font-weight: 600;
 }
 
-.service-expand-label > span {
+.service-expand-icon {
   font-size: 1.3rem;
   line-height: 1;
   transition: transform var(--transition);
 }
 
-.service-card[open] .service-expand-label > span {
+.service-expand-close-label {
+  display: none;
+}
+
+.service-card[open] .service-expand-open-label {
+  display: none;
+}
+
+.service-card[open] .service-expand-close-label {
+  display: inline;
+}
+
+.service-card[open] .service-expand-icon {
   transform: rotate(45deg);
 }
 
