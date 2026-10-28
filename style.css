@@ -409,19 +409,21 @@ h1, h2, h3 {
   box-shadow: 0 12px 24px -12px rgba(0,0,0,0.15), 0 0 0 1px var(--color-accent);
 }
 
-.service-card-summary {
+.service-card-toggle {
+  width: 100%;
+  padding: 0;
   display: flex;
   flex: 1;
   flex-direction: column;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  font: inherit;
   cursor: pointer;
-  list-style: none;
 }
 
-.service-card-summary::-webkit-details-marker {
-  display: none;
-}
-
-.service-card-summary:focus-visible {
+.service-card-toggle:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 5px;
   border-radius: 4px;
@@ -463,15 +465,15 @@ h1, h2, h3 {
   display: none;
 }
 
-.service-card[open] .service-expand-open-label {
+.service-card.is-open .service-expand-open-label {
   display: none;
 }
 
-.service-card[open] .service-expand-close-label {
+.service-card.is-open .service-expand-close-label {
   display: inline;
 }
 
-.service-card[open] .service-expand-icon {
+.service-card.is-open .service-expand-icon {
   transform: rotate(45deg);
 }
 
@@ -510,12 +512,34 @@ h1, h2, h3 {
   letter-spacing: 0.1em;
 }
 
+.service-card-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 1px solid transparent;
+  opacity: 0;
+  transition: grid-template-rows 320ms ease, opacity 220ms ease, margin-top 320ms ease, padding-top 320ms ease, border-color 220ms ease;
+}
+
+.service-card.is-open .service-card-panel {
+  grid-template-rows: 1fr;
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top-color: var(--color-border);
+  opacity: 1;
+}
+
+.service-card-panel-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
 .service-details {
-  margin: var(--space-md) 0 0;
-  padding: var(--space-md) 0 0;
+  margin: 0;
+  padding: 0;
   display: grid;
   gap: 0.55rem;
-  border-top: 1px solid var(--color-border);
   list-style: none;
 }
 
@@ -1073,4 +1097,11 @@ h1, h2, h3 {
   height: auto;
   display: block;
   mix-blend-mode: normal;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card-panel,
+  .service-expand-icon {
+    transition: none;
+  }
 }
